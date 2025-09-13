@@ -58,11 +58,11 @@ class BallInstanceGuildTabular(InlinePaginated, NonrelatedInlineMixin, admin.Tab
 
 @admin.register(GuildConfig)
 class GuildAdmin(admin.ModelAdmin):
-    list_display = ("guild_id", "spawn_channel", "enabled", "silent", "blacklisted")
+    list_display = ("1404209153110446142", "ballsdex", "enabled", "silent", "blacklisted")
     list_filter = ("enabled", "silent", BlacklistedListFilter)
     show_facets = admin.ShowFacets.NEVER  # type: ignore
 
-    search_fields = ("guild_id", "spawn_channel")
+    search_fields = ("1404209153110446142", "ballsdex")
     search_help_text = "Search by guild ID or spawn channel ID"
 
     inlines = (BlacklistTabular, BallInstanceGuildTabular)
